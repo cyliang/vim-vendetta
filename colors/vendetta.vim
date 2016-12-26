@@ -5,6 +5,9 @@ let s:selection = "424242"
 let s:line = "202020"
 let s:non_text = "666666"
 let s:comment = "888888"
+let s:variable = "e6ffe6"
+let s:class = "32a4e7"
+let s:enum = "66ff66"
 let s:red = "DE575C"
 let s:orange = "ED934C"
 let s:yellow = "EBE971"
@@ -280,6 +283,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("Todo", s:red, s:background, "bold")
   call <SID>X("Title", s:comment, "", "")
   call <SID>X("Identifier", s:aqua, "", "none")
+  call <SID>X("Variable", s:variable, "", "")
   call <SID>X("Statement", s:yellow, "", "none")
   call <SID>X("Conditional", s:blue, "", "")
   call <SID>X("Repeat", s:yellow, "", "")
@@ -301,6 +305,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("vimCommand", s:red, "", "none")
 
   " C Highlighting
+  call <SID>X("StructDecl", s:class, "", "")
+  call <SID>X("UnionDecl", s:class, "", "")
+  call <SID>X("ClassDecl", s:class, "", "")
+  call <SID>X("EnumDecl", s:class, "", "")
+  call <SID>X("TypeRef", s:class, "", "")
+  call <SID>X("EnumConstant", s:enum, "", "")
   call <SID>X("cType", s:blue, "", "")
   call <SID>X("cStorageClass", s:yellow, "", "")
   call <SID>X("cConditional", s:blue, "", "")
