@@ -25,6 +25,10 @@ set background=dark
 hi clear
 syntax reset
 
+" For vim-indent-guides support
+hi IndentGuidesOdd  ctermbg=234
+hi IndentGuidesEven ctermbg=233
+
 let g:colors_name = "vendetta"
 
 if has("gui_running") || &t_Co == 88 || &t_Co == 256
